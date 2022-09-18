@@ -8,8 +8,8 @@ module.exports = ({ env }) => ({
         database:  env('DATABASE_NAME', 'strapi'),
         username: env('DATABASE_USER', 'strapi'),
         password: env('DATABASE_PASSWD', 'strapi'),
-        port: env('DATABASE_PORT', 3307),
-        host: env('DATABASE_HOST', 'strapi'),
+        port: env('DATABASE_PORT', 3306),
+        host: env('DATABASE_HOST', 'localhost'),
       },
       options: {
       },
