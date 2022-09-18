@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clubabende",
+  "info": {
+    "name": "clubabend"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titel": {
+      "type": "string"
+    },
+    "datum": {
+      "type": "date"
+    },
+    "beitragsbild": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "inhalt": {
+      "type": "richtext"
+    }
+  }
+}

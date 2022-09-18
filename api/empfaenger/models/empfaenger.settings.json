@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Empfaenger",
+  "info": {
+    "name": "Empfaenger",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Vorname": {
+      "type": "string",
+      "required": true
+    },
+    "Nachname": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "Geschlecht": {
+      "type": "enumeration",
+      "enum": [
+        "W",
+        "M"
+      ],
+      "required": true
+    },
+    "BenachrichtigenBis": {
+      "type": "date"
+    }
+  }
+}

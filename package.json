@@ -1,0 +1,39 @@
+{
+  "name": "rcb-relaunch-2020",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Rednerclub Bergedorf Homepage relaunch 2021",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "react-simple-code-editor": "^0.11.0",
+    "strapi": "3.6.6",
+    "strapi-admin": "3.6.6",
+    "strapi-connector-mongoose": "3.6.6",
+    "strapi-plugin-content-manager": "3.6.6",
+    "strapi-plugin-content-type-builder": "3.6.6",
+    "strapi-plugin-email": "3.6.6",
+    "strapi-plugin-import-export-content": "^0.4.0",
+    "strapi-plugin-upload": "3.6.6",
+    "strapi-plugin-users-permissions": "3.6.6",
+    "strapi-provider-upload-cloudinary": "^3.6.6",
+    "strapi-utils": "3.6.6",
+    "styled-components": "^5.3.0"
+  },
+  "author": {
+    "name": "Tilo Thiele <tilo.thiele@hamburg.de>"
+  },
+  "strapi": {
+    "uuid": "a701accb-ddc4-4927-94c2-32d1de73ad71"
+  },
+  "engines": {
+    "node": "<15.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

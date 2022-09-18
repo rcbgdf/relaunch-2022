@@ -1,0 +1,16 @@
+{
+  "kind": "singleType",
+  "collectionName": "termines",
+  "info": {
+    "name": "Termine"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "inhalt": {
+      "type": "richtext"
+    }
+  }
+}

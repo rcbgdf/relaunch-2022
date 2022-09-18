@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/vorstandsmitglieds",
+      "handler": "vorstandsmitglied.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vorstandsmitglieds/count",
+      "handler": "vorstandsmitglied.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vorstandsmitglieds/:id",
+      "handler": "vorstandsmitglied.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/vorstandsmitglieds",
+      "handler": "vorstandsmitglied.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/vorstandsmitglieds/:id",
+      "handler": "vorstandsmitglied.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/vorstandsmitglieds/:id",
+      "handler": "vorstandsmitglied.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

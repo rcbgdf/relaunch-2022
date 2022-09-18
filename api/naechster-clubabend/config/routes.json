@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/naechster-clubabend",
+      "handler": "naechster-clubabend.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/naechster-clubabend",
+      "handler": "naechster-clubabend.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/naechster-clubabend",
+      "handler": "naechster-clubabend.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/empfaengers",
+      "handler": "empfaenger.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/empfaengers/count",
+      "handler": "empfaenger.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/empfaengers/:id",
+      "handler": "empfaenger.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/empfaengers",
+      "handler": "empfaenger.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/empfaengers/:id",
+      "handler": "empfaenger.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/empfaengers/:id",
+      "handler": "empfaenger.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

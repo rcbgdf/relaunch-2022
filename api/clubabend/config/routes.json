@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/clubabends",
+      "handler": "clubabend.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/clubabends/count",
+      "handler": "clubabend.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/clubabends/:id",
+      "handler": "clubabend.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/clubabends",
+      "handler": "clubabend.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/clubabends/:id",
+      "handler": "clubabend.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/clubabends/:id",
+      "handler": "clubabend.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
