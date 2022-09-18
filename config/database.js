@@ -5,11 +5,11 @@ module.exports = ({ env }) => ({
       connector: 'bookshelf',
       settings: {
         client: 'mysql',
-        database: 'rcb_relaunch_2022',
-        username: 'strapi',
-        password: 'strapi',
-        port: 3306,
-        host: 'localhost',
+        database:  env('DATABASE_NAME', 'strapi'),
+        username: env('DATABASE_USER', 'strapi'),
+        password: env('DATABASE_PASSWD', 'strapi'),
+        port: env('DATABASE_PORT', 3307),
+        host: env('DATABASE_HOST', 'strapi'),
       },
       options: {
       },
