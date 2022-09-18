@@ -2,14 +2,16 @@ module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
     default: {
-      connector: 'mongoose',
+      connector: 'bookshelf',
       settings: {
-        database: env('DATABASE_NAME', 'rcb-relaunch-2020'),
-        uri: env('DATABASE_URI'),
+        client: 'mysql',
+        database: 'rcb_relaunch_2022',
+        username: 'strapi',
+        password: 'strapi',
+        port: 3306,
+        host: 'localhost',
       },
       options: {
-        authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
-        ssl: env.bool('DATABASE_SSL', true),
       },
     },
   },
