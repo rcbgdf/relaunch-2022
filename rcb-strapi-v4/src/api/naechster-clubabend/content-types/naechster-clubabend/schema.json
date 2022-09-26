@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "naechster_clubabends",
+  "info": {
+    "singularName": "naechster-clubabend",
+    "pluralName": "naechster-clubabends",
+    "displayName": "Naechster_Clubabend"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "inhalt": {
+      "type": "richtext",
+      "required": true
+    },
+    "Datum": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

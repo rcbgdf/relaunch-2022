@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vorstandsmitglieds",
+  "info": {
+    "singularName": "vorstandsmitglied",
+    "pluralName": "vorstandsmitglieds",
+    "displayName": "Vorstandsmitglied"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ord": {
+      "type": "integer",
+      "unique": true,
+      "min": 1
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Rolle": {
+      "type": "string"
+    },
+    "Emailadresse": {
+      "type": "email"
+    },
+    "Avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

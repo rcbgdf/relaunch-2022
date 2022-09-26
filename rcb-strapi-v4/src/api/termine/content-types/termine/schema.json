@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "termines",
+  "info": {
+    "singularName": "termine",
+    "pluralName": "termines",
+    "displayName": "Termine"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "inhalt": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

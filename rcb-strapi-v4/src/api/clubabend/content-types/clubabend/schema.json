@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clubabends",
+  "info": {
+    "singularName": "clubabend",
+    "pluralName": "clubabends",
+    "displayName": "Clubabend"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titel": {
+      "type": "string",
+      "required": true
+    },
+    "datum": {
+      "type": "date",
+      "required": true
+    },
+    "beitragsbild": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "inhalt": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
