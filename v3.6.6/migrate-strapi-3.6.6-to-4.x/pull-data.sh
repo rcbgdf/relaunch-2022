@@ -9,7 +9,7 @@
 set -x
 
 BASEDIR="./dump"
-MYSQL_DB_NAME="rcb_relaunch_2022"
+MYSQL_DB_NAME="rcb_relaunch_2020"
 mkdir -p $BASEDIR
 
 #sudo mysqladmin create -uroot $MYSQL_DB_NAME
@@ -51,20 +51,20 @@ pull_collection() {
     import_mysql_table $1 "$MYSQL_COLUMNS"
 }
 
-#mysql -ustrapi -pstrapi $MYSQL_DB_NAME <<EOF
-#    alter table clubabende add beitragsbild varchar(24);
-#EOF
-#pull_collection "clubabende" "_id,titel,datum,inhalt,createdAt,updatedAt,__v,beitragsbild,created_by,updatedBy"
+mysql -ustrapi -pstrapi $MYSQL_DB_NAME <<EOF
+    alter table clubabende add beitragsbild varchar(24);
+EOF
+pull_collection "clubabende" "_id,titel,datum,inhalt,createdAt,updatedAt,__v,beitragsbild,created_by,updatedBy"
 
 #pull_collection "core_store" "_id,key,environment,tag,value,type,createdAt,updatedAt,__v"
 #pull_collection "naechster_clubabends" "_id,Datum,inhalt,createdAt,updatedAt,__v,created_by,updated_by"
 ##pull_collection singletype1s --type=csv --fields "" $IMPORT_MONGO_DB_URI
-pull_collection "strapi_administrator" "_id,isActive,blocked,roles,username,registrationToken,firstname,lastname,email,password,createdAt,updatedAt,__v,resetPasswordToken,preferedLanguage"
+#pull_collection "strapi_administrator" "_id,isActive,blocked,roles,username,registrationToken,firstname,lastname,email,password,createdAt,updatedAt,__v,resetPasswordToken,preferedLanguage"
 #pull_collection "strapi_permission" "_id,action,subject,conditions,fields,createdAt,updatedAt,__v,role"
 #pull_collection "strapi_role" "_id,name,code,description,createdAt,updatedAt,__v"
 #pull_collection "strapi_webhooks" "_id,name,url,headers,events,enabled,createdAt,updatedAt,__v"
 #pull_collection "termines" "_id,inhalt,createdAt,updatedAt,__v,created_by,updated_by"
-#pull_collection "upload_file" "_id,name,alternativeText,caption,hash,ext,mime,size,idth,height,url,formats,provider,related,createdAt,updatedAt,__v,created_by,updated_by,provider_metadata"
+pull_collection "upload_file" "_id,name,alternativeText,caption,hash,ext,mime,size,idth,height,url,formats,provider,related,createdAt,updatedAt,__v,created_by,updated_by,provider_metadata"
 ##pull_collection users-permissions_permission --type=csv --fields "" $IMPORT_MONGO_DB_URI
 ##pull_collection users-permissions_role --type=csv --fields "" $IMPORT_MONGO_DB_URI
 ##pull_collection users-permissions_user --type=csv --fields "" $IMPORT_MONGO_DB_URI
