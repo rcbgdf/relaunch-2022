@@ -8,10 +8,11 @@ function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 module.exports = {
+  pathPrefix: "/relaunch-2022",
   siteMetadata: {
     title: `Rednerclub Bergedorf`,
-    description: `Rednerclub Bergedorf Homepage Relaunch 2021.`,
-    author: `tilo.thiele@hamburg.de`,
+    description: `Rednerclub Bergedorf Homepage`,
+    author: `toastmaster@rc-bgdf`,
     siteUrl: `${process.env.GATSBY_PUBLIC_URL}`
   },
   plugins: [

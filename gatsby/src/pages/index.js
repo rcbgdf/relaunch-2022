@@ -9,6 +9,7 @@ import IconedItemList from "../components/iconed-item-list/iconed-item-list"
 import InfoBox from "../components/info-box/info-box"
 import TextCarousel from "../components/text-carousell/text-carousell"
 import ContactForm from "../components/contact-form/contact-form"
+import { Helmet } from "react-helmet"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { graphql } from "gatsby"
