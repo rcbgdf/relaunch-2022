@@ -1,0 +1,12 @@
+@import "../../style-tokens.scss";
+
+.footer {
+  width: 100%;
+  text-align: center;
+  //height: 1rem; /* Footer height */
+  a {
+    display: inline;
+    color: $rcb-color-moosgruen;
+  }
+  padding: 10px 0;
+}

@@ -1,0 +1,21 @@
+@import "../../style-tokens.scss";
+
+.fa-ul {
+  .fa-li {
+    left: -3em;
+  }
+  .svg-inline--fa {
+    height: 3em;
+  }
+  .svg-inline--fa.fa-li {
+    width: 3em;
+    margin: .5em;
+  }
+  li {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    svg {
+      color: $rcb-icon-color;
+    }
+  }
+}

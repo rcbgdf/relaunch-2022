@@ -1,0 +1,14 @@
+
+table {
+    margin: 1em;
+}
+th, td {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+tr:nth-child(even) {
+    background: rgba(0,0,0,0.03);
+}

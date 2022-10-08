@@ -1,0 +1,28 @@
+
+
+#markdown-page {
+    table {
+        margin: 1em;
+    }
+
+    th, td {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    tr:nth-child(even) {
+        background: rgba(0,0,0,0.03);
+    }
+
+    #kennwort-form-section {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    h2, h3, h4, h5, h6 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+}

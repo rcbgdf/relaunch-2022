@@ -1,0 +1,21 @@
+@import "../../style-tokens.scss";
+
+button.btn {
+  font-weight: bold;
+  margin-top: 30px;
+  color: #f1f1f1;
+  border: #f1f1f1 1px solid;
+  padding: 10px 5px;
+  background: $rcb-color-hellblau;
+  font-size: 1.25rem;
+  border-radius: 5px;
+}
+
+button.btn:hover {
+  color: white;
+}
+
+.w-btn-wrapper {
+  opacity: 1;
+  display: inline-block;
+}

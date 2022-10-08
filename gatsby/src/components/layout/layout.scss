@@ -1,0 +1,35 @@
+@import "../../style-tokens.scss";
+
+/*
+.content {
+  margin-top: 85px;
+  padding-left: $rcb-site-padding;
+  padding-right: $rcb-site-padding;
+  padding-bottom: 3.5rem; 
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+}
+
+*/
+
+#header,
+#footer {
+  display: flex;
+}
+
+#wrap {
+  //min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
+}
+#wrap > .container-fluid {
+  padding-top: 66px;
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+}

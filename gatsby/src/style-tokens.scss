@@ -1,0 +1,105 @@
+$rcb-color-hellblau: #29a3c2;
+$rcb-color-moosgruen: #155c13;
+
+$rcb-color-light-hellblau: #cbedf6;
+$rcb-color-logo-pastellblau: #54c4e0;
+$rcb-color-logo-hellgruen: #5fa000;
+$rcb-color-logo-pastellgruen: #a6ca00;
+
+$tmi-color-true-maroon: rgb(119, 36, 50);
+$tmi-color-loyal-blue: rgb(0, 65, 101);
+$tmi-color-cool-grey: rgb(169, 178, 177);
+$tmi-color-happy-yellow: rgb(242, 223, 116);
+
+$rcb-font-main-family: "Cairo", sans-serif;
+
+$rcb-site-padding: 0.5rem;
+
+$rcb-icon-color: $tmi-color-true-maroon;
+
+$rcb-hx-color: $tmi-color-true-maroon;
+$rcb-text-color: darken($tmi-color-cool-grey, 30%);
+$rcb-link-color: $tmi-color-true-maroon;
+$rcb-menu-color: $rcb-color-moosgruen;
+
+p {
+  color: $rcb-text-color;
+}
+
+a {
+  color: $rcb-link-color;
+}
+a:hover {
+  color: darken($rcb-link-color, 30%);
+}
+a:hover {
+  color: lighten($rcb-link-color, 20%);
+}
+
+.rcb-bg-light {
+  background-color: lighten($tmi-color-loyal-blue, 80%);
+}
+
+.section-a {
+  background-color: lighten($tmi-color-cool-grey, 28%);
+  padding-bottom: 1em;
+}
+
+.section-b {
+  background-color: lighten($tmi-color-cool-grey, 40%);
+  padding-bottom: 1em;
+}
+
+#___gatsby table {
+  margin: 0px;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $rcb-font-main-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $rcb-text-color;
+}
+
+h1 {
+  font-weight: 600;
+}
+h2 {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 400;
+}
+h4 {
+  font-weight: 300;
+}
+h5 {
+  font-weight: 200;
+}
+h6 {
+  font-weight: 100;
+}
+
+.container {
+  max-width: 800px;
+}
+
+@media (min-width: 400px) {
+  .large-container {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}

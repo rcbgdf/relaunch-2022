@@ -1,0 +1,14 @@
+@import "../../style-tokens.scss";
+
+.info-box-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  div:nth-child(1) {
+    margin: auto;
+    padding: 2em;
+  }
+  svg {
+    color: $rcb-icon-color;
+  }
+}
