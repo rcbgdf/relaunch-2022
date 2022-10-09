@@ -16,7 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 12
-      - run: cd gatsby
-      - run: npm i
-      - run: npm run build
-      - run: npm run deploy
+        working-directory: gatsby
+        run: |
+          npm i
+          npm run build
+          npm run deploy
