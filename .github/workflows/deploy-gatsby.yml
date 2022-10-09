@@ -8,9 +8,11 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         node-version: 12.x
+
     steps:
       - uses: actions/checkout@v1
 
@@ -19,6 +21,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           working-dir: gatsby
-      - runs: npm i
-      - runs: npm run build
-      - runs: npm run deploy
+      - run: npm i
+      - run: npm run build
+      - run: npm run deploy
