@@ -12,7 +12,7 @@ jobs:
     defaults:
       run:
         working-directory: gatsby
-
+    environment: github-pages
     steps:
       - uses: actions/checkout@v3
 
