@@ -1,6 +1,8 @@
 name: Gatsby Publish
 
 on:
+  push:
+    branches: master
   release:
     types:
       - released
@@ -12,7 +14,6 @@ jobs:
     defaults:
       run:
         working-directory: gatsby
-    environment: github-pages
     steps:
       - uses: actions/checkout@v3
 
