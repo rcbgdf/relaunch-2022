@@ -98,7 +98,7 @@ const IndexPage = ({ data }) => {
             <Col md={12}>
               <h2 className="section-title">Wer wir sind und was wir machen</h2>
               <p>
-                Wir sind Menschen Jeden Alters – vom Schüler bis zum Rentner.
+                Wir sind Menschen jeden Alters – vom Schüler bis zum Rentner.
                 Wir kommen aus allen Gesellschaftsschichten. Wir lieben die
                 Rhetorik und das Kribbeln im Bauch, wenn wir auf der Rednerbühne
                 stehen. Wir genießen die Momente des Alltags, in denen wir
