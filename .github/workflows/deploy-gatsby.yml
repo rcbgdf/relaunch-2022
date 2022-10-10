@@ -15,17 +15,18 @@ jobs:
     env:
       STRAPI_API_URL: "https://rcb-relaunch-2020.herokuapp.com"
       GATSBY_GOOGLE_MAPS_API_KEY: ${{ secrets.GATSBY_GOOGLE_MAPS_API_KEY }}
-      GATSBY_LOLA_LAT: "53.4953819" 
-      GATSBY_LOLA_LNG: "10.2058116" 
-#      GATSBY_PUBLIC_URL: "https://rc-bgdf.de" 
+      GATSBY_LOLA_LAT: "53.4953819"
+      GATSBY_LOLA_LNG: "10.2058116"
+#      GATSBY_PUBLIC_URL: "https://rc-bgdf.de"
       GATSBY_PUBLIC_URL: "https://rcbgdf.github.io/relaunch-2022"
       GATSBY_OWM_API_KEY: ${{ secrets.GATSBY_OWM_API_KEY }}
-      GATSBY_FB_APPID: "555845005032870" 
+      GATSBY_FB_APPID: "555845005032870"
+      GATSBY_RELEASE_VERSION: $RELEASE_VERSION
     steps:
       - uses: actions/checkout@v3
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-      
+
       - name: Node installieren & Build
         uses: actions/setup-node@v3
         with:
@@ -33,11 +34,11 @@ jobs:
       - run: env
       - run: npm i
       - run: npm run build
-      
+
       - name: Deploy Github Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: gatsby/public
-        
+

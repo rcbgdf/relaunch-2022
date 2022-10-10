@@ -9,7 +9,7 @@ import "./footer.scss"
 export default function Footer() {
   return (
     <Row className="footer">
-      <Col xs={6}>&copy; {moment().format("yyyy")} Rednerclub Bergedorf v{process.env.RELEASE_VERSION}</Col>
+      <Col xs={6}>&copy; {moment().format("yyyy")} Rednerclub Bergedorf v{process.env.GATSBY_RELEASE_VERSION}</Col>
       <Col xs={6}>
         <Nav.Link href="/datenschutz">Datenschutz</Nav.Link>
         {" | "}
