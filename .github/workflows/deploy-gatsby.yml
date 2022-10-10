@@ -10,6 +10,11 @@ on:
 jobs:
   build-deploy:
 
+
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: gatsby
     env:
       STRAPI_API_URL: "https://rcb-relaunch-2020.herokuapp.com"
       GATSBY_GOOGLE_MAPS_API_KEY: ${{ secrets.GATSBY_GOOGLE_MAPS_API_KEY }}
@@ -18,11 +23,6 @@ jobs:
       GATSBY_PUBLIC_URL: "https://rc-bgdf.de" 
       GATSBY_OWM_API_KEY: ${{ secrets.GATSBY_OWM_API_KEY }}
       GATSBY_FB_APPID: "555845005032870" 
-
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: gatsby
     steps:
       - uses: actions/checkout@v3
 
