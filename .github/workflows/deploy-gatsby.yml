@@ -1,16 +1,13 @@
 name: Gatsby Publish
 
 on:
-#  push:
-#    branches: master
+  push:
+    branches: master
   release:
     types:
       - released
-
 jobs:
-  build-deploy:
-
-
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -33,4 +30,11 @@ jobs:
       - run: env
       - run: npm i
       - run: npm run build
-      - run: npm run deploy
+      
+      - name: Deploy Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: gatsby/dist
+        
