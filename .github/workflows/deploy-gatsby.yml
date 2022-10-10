@@ -20,6 +20,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 12
+        env:
+          STRAPI_API_URL: "https://rcb-relaunch-2020.herokuapp.com"
+          GATSBY_GOOGLE_MAPS_API_KEY: ${{ secrets.GATSBY_GOOGLE_MAPS_API_KEY }}
+          GATSBY_LOLA_LAT: "53.4953819" 
+          GATSBY_LOLA_LNG: "10.2058116" 
+          GATSBY_PUBLIC_URL: "https://rc-bgdf.de" 
+          GATSBY_OWM_API_KEY: ${{ secrets.GATSBY_OWM_API_KEY }}
+          GATSBY_FB_APPID: "555845005032870" 
       - run: npm i
       - run: npm run build
       - run: npm run deploy
