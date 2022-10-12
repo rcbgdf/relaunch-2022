@@ -1,8 +1,8 @@
 {
-  "name": "rcb-relaunch-2020",
+  "name": "rcb-backend",
   "private": true,
   "version": "0.1.0",
-  "description": "Rednerclub Bergedorf Homepage relaunch 2021",
+  "description": "Rednerclub Bergedorf Homepage",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -34,8 +34,7 @@
     "uuid": "a701accb-ddc4-4927-94c2-32d1de73ad71"
   },
   "engines": {
-    "node": "<15.0.0",
-    "npm": ">=6.0.0"
+    "node": "10"
   },
   "license": "MIT"
 }
