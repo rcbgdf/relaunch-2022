@@ -1,28 +1,27 @@
 {
   "name": "strapi-plugin-trigger-publish",
   "version": "0.0.0",
-  "description": "This is the description of the plugin.",
+  "description": "Triggert eine Github Action.",
   "strapi": {
-    "name": "trigger-publish",
+    "name": "Publish Github Pages",
     "icon": "plug",
-    "description": "Description of trigger-publish plugin."
+    "description": "Triggert eine Github Action"
   },
   "dependencies": {},
   "author": {
-    "name": "A Strapi developer",
+    "name": "tilo.thiele@hamburg.de",
     "email": "",
     "url": ""
   },
   "maintainers": [
     {
-      "name": "A Strapi developer",
+      "name": "tilo.thiele@hamburg.de",
       "email": "",
       "url": ""
     }
   ],
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
-    "npm": ">=6.0.0"
+    "node": "10"
   },
   "license": "MIT"
 }
