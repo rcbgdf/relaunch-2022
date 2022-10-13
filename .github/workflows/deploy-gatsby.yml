@@ -6,6 +6,11 @@ on:
   release:
     types:
       - released
+      
+  repository_dispatch:
+    types:
+      - webhook
+      
 jobs:
   build:
     runs-on: ubuntu-latest
