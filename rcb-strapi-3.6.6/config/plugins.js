@@ -11,6 +11,10 @@ module.exports = ({ env }) => ({
     url: env('BITBUCKET_PIPELINE_URL', null),
     user: env('BITBUCKET_PIPELINE_USERNAME', null),
     passwd: env('BITBUCKET_PIPELINE_PASSWORD', null)
+  },
+  'trigger-publish': {
+    url: env('PUBLISH_API_URL', null),
+    token: env('PUBLISH_API_TOKEN', null)
   }
 
 });
