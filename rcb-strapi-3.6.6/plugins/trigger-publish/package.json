@@ -1,0 +1,27 @@
+{
+  "name": "strapi-plugin-trigger-publish",
+  "version": "0.0.0",
+  "description": "Triggert eine Github Action.",
+  "strapi": {
+    "name": "Publish Github Pages",
+    "icon": "plug",
+    "description": "Triggert eine Github Action"
+  },
+  "dependencies": {},
+  "author": {
+    "name": "tilo.thiele@hamburg.de",
+    "email": "",
+    "url": ""
+  },
+  "maintainers": [
+    {
+      "name": "tilo.thiele@hamburg.de",
+      "email": "",
+      "url": ""
+    }
+  ],
+  "engines": {
+    "node": "10"
+  },
+  "license": "MIT"
+}

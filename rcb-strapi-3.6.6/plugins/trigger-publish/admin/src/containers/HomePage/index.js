@@ -1,9 +1,7 @@
+
 import React, { memo } from 'react';
 
 import { Button } from '@buffetjs/core';
-
-// import PropTypes from 'prop-types';
-//import pluginId from '../../pluginId';
 
 import axios from 'axios';
 
@@ -12,7 +10,7 @@ import "./index.css"
 const HomePage = () => {
   const publishHandler = e => {
     axios
-    .get('/trigger-bitbucket-pipeline')
+    .get('/trigger-publish')
     .then(res => {
       console.log(res)
       strapi.notification.success('Inhalte werden veröffentlicht. Das kann bis zu 10 Minuten dauern...');
