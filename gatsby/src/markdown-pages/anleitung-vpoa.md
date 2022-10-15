@@ -17,7 +17,7 @@ Klar - du kannst diese Aufgaben natürlich delegieren. Als Vorstandsmitglied ist
 
 Du kannst es unter dem Link
 
-https://rcb-relaunch-2020.herokuapp.com/admin/auth/login
+https://backend.rcb-bgdf.de/admin/auth/login
 
 aufrufen. Du benötigst (falls noch nicht vorhanden) einen Zugang. Du loggst dich mit deiner EMail-Adresse und deinem Passwort ein.
 Hast du noch keinen Zugang, so wende dich an den Präsidenten oder den Webmaster.
