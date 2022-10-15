@@ -10,18 +10,30 @@ const axios = require('axios')
 
 module.exports = {
 
-  /**
-   * Default action.
-   *
-   * @return {Object}
-   */
-
   index: async (ctx) => {
-    // Add your own logic here.
-
-    // Send 200 `ok`
-    ctx.send({
-      message: 'ok'
-    });
+    const url = strapi.config.get('plugins.trigger-publish.url');
+    const apiToken = strapi.config.get('plugins.trigger-publish.token');
+    const body = {
+        event_type: "webhook"
+    };
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github+json',
+        'Authorization': `token ${apiToken}`
+      }
+    }
+    console.log(`post ${url}`)
+    try {
+      const res = await axios.post(url, body, config);
+      ctx.send({
+        message: 'ok'
+      });
+    } catch(err) {
+      console.log(err)
+      ctx.error({
+        message: 'error'
+      });
+    }
   }
 };
