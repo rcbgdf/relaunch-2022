@@ -9,7 +9,7 @@ Den aktuellen Redeplan (in Tabellenform) findest du unter
 [diesem Link](https://docs.google.com/spreadsheets/d/1R_ezzESz3pHakBopZBAHZ75li6HF4ucYPxeuGPPl5po/edit?pli=1#gid=670966173).
 Formulare, Checklisten, Vorlagen ect.
 
-Willst du Seien/Inhalte der Website bearbeiten? gehe in's [Admin-Backend](https://rcb-relaunch-2020.herokuapp.com/admin).
+Willst du Seien/Inhalte der Website bearbeiten? gehe in's [Admin-Backend](https://backend.rc-bgdf.de/admin).
 
 Eine Anleitung für den VP Öffentlichkeitsarbeit zum [Veröffentlichen der Beiträge und Termine gibts hier](/anleitung-oeffentlichkeitsarbeit).
 
