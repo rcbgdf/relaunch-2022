@@ -18,7 +18,7 @@ jobs:
       run:
         working-directory: gatsby
     env:
-      STRAPI_API_URL: "https://rcb-relaunch-2020.herokuapp.com"
+      STRAPI_API_URL: ${{ secrets.STRAPI_API_URL }}
       GATSBY_GOOGLE_MAPS_API_KEY: ${{ secrets.GATSBY_GOOGLE_MAPS_API_KEY }}
       GATSBY_LOLA_LAT: "53.4953819"
       GATSBY_LOLA_LNG: "10.2058116"
