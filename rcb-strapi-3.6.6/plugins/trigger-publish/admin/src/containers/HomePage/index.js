@@ -8,7 +8,7 @@ import axios from 'axios';
 import "./index.css"
 
 const HomePage = () => {
-  const jwtToken = sessionStorage.getItem('jwtToken')
+  const jwtToken = JSON.parse(sessionStorage.getItem('jwtToken'))
 
   const publishHandler = e => {
     axios
