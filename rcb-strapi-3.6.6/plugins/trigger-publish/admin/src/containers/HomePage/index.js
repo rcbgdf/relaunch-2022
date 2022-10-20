@@ -8,9 +8,15 @@ import axios from 'axios';
 import "./index.css"
 
 const HomePage = () => {
+  const jwtToken = sessionStorage.getItem('jwtToken')
+
   const publishHandler = e => {
     axios
-    .get('/trigger-publish')
+    .get('/trigger-publish', {
+      headers: {
+        Authorization:
+          `Bearer ${jwtToken}`,
+      }})
     .then(res => {
       console.log(res)
       strapi.notification.success('Inhalte werden veröffentlicht. Das kann bis zu 10 Minuten dauern...');
