@@ -1,5 +1,5 @@
 {
-  "name": "rcb-relaunch-2020",
+  "name": "rcb-website",
   "private": true,
   "description": "Rednerclub Bergedorf",
   "version": "0.1.0",
@@ -89,7 +89,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "engines": {
-    "node": "12.x",
-    "npm": "^6.0.0"
+    "node": "12",
+    "npm": "6"
   }
 }
