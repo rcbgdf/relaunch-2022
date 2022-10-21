@@ -1,5 +1,4 @@
 import React from "react"
-import ReactPlayer from "react-player"
 import RcbButton from "../button/rcb-button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {Container,Row,Col} from "react-bootstrap"
