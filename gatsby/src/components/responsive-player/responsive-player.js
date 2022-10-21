@@ -38,18 +38,12 @@ const {img80, img150, img337} = file.childrenImageSharp[0]
 const image_klein = getImage({gatsbyImageData: img80})
 const image_mittel = getImage({gatsbyImageData: img150})
 const image_gross = getImage({gatsbyImageData: img337})
-//console.log(img80, img150, img337)
+//console.log(process.env.GATSBY_HERO_VIDEO_URL)
   return (
     <div className="player-wrapper">
-      <ReactPlayer
-        loop={true}
-        playing={true}
-        muted={true}
-        className="react-player"
-        url="https://youtu.be/YAnqW6qdy3s"
-        width="100%"
-        height="100%"
-      />
+      <video autoPlay muted playsInline>
+        <source src={process.env.GATSBY_HERO_VIDEO_URL} type="video/mp4" />
+      </video>
       <div className="backdrop">
         <Container fluid>
           <Row>
