@@ -37,6 +37,7 @@ const {img80, img150, img337} = file.childrenImageSharp[0]
 const image_klein = getImage({gatsbyImageData: img80})
 const image_mittel = getImage({gatsbyImageData: img150})
 const image_gross = getImage({gatsbyImageData: img337})
+
 //console.log(process.env.GATSBY_HERO_VIDEO_URL)
   return (
     <div className="player-wrapper">

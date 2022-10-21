@@ -9,15 +9,18 @@ import React from "react"
 import PropTypes from "prop-types"
 import Header from "../header/header"
 import Footer from "../footer/footer"
+import CookieConsent from "react-cookie-consent"
 
 import "./layout.scss"
+
+// #155c13
 
 const Layout = ({ children }) => {
   return (
     <div id="wrap">
       <div id="header">
         <div className="container">
-          <Header />
+          <Header/>
         </div>
       </div>
 
@@ -25,9 +28,19 @@ const Layout = ({ children }) => {
 
       <div id="footer" className="rcb-bg-light">
         <div className="container-fluid">
-          <Footer />
+          <Footer/>
         </div>
       </div>
+
+      <CookieConsent
+        location="bottom"
+        buttonText="Einverstanden"
+        style={{ background: "rgb(0, 65, 101)" }}
+        buttonStyle={{ backgroundColor: "#29a3c2", color: "white", fontSize: "13px" }}
+        expires={150}
+      >
+        Unsere Website verwendet Cookies.
+      </CookieConsent>
     </div>
   )
 }

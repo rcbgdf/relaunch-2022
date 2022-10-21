@@ -1,4 +1,6 @@
 import React from "react"
+import { getCookieConsentValue } from "react-cookie-consent";
+import { StaticImage  } from "gatsby-plugin-image"
 
 const lon0=10.204504430294039
 const lat0=53.49484826469885
@@ -12,16 +14,28 @@ const lon=10.205826759338379
 
 
 
-const Map = () => <>
-  <iframe width='100%' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
-    src={`https://www.openstreetmap.org/export/embed.html?bbox=${lon0},${lat0},${lon1},${lat1}&layer=mapnik&marker=${lat},${lon}`}
-    style={{border: '1px', solid: true, black: true}}>
-  </iframe>
-  <br />
-  <small>
-    <a href={`https://www.openstreetmap.org/?lat=${lat}&amp;lon=${lon}&amp;zoom=16&amp;layers=M`} target='_blank'>Gr&#246;&#223;ere Karte anzeigen</a>
-  </small>
-</>
+const OsmMap = () => {
+  return <>
+    <iframe width='100%' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
+      src={`https://www.openstreetmap.org/export/embed.html?bbox=${lon0},${lat0},${lon1},${lat1}&layer=mapnik&marker=${lat},${lon}`}
+      style={{border: '1px', solid: true, black: true}}>
+    </iframe>
+    <div style={{textAlign: 'center', fontSize: '0.8rem'}}>
+      <a href={`https://www.openstreetmap.org/?lat=${lat}&amp;lon=${lon}&amp;zoom=16&amp;layers=M`} target='_blank'>Gr&#246;&#223;ere Karte anzeigen</a>
+    </div>
+  </>
+}
+
+const Map = () => {
+  const cookieConsent = getCookieConsentValue()
+  console.log('cookieConsent='+cookieConsent)
+  return cookieConsent
+  ? <OsmMap/>
+  : <div style={{width: '100%', height: 350}}>
+      <StaticImage transformOptions={{fit: "inside"}} alt="Anfahrt Platzhalter" src="../../../static/images/osm-placeholder.png"/>
+    </div>
+
+}
 
 // <LealetMap center={position} zoom={15} scrollWheelZoom={false}>
 // <TileLayer
