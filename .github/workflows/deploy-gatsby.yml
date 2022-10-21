@@ -22,7 +22,7 @@ jobs:
       GATSBY_GOOGLE_MAPS_API_KEY: ${{ secrets.GATSBY_GOOGLE_MAPS_API_KEY }}
       GATSBY_LOLA_LAT: "53.4953819"
       GATSBY_LOLA_LNG: "10.2058116"
-#      GATSBY_PUBLIC_URL: "https://rc-bgdf.de"
+      GATSBY_HERO_VIDEO_URL: "https://res.cloudinary.com/dgibmteg8/video/upload/v1666350254/rcb-downloads/ThomasStegreifrede5jahresfeierRcb.mp4"
       GATSBY_PUBLIC_URL: "https://rcbgdf.github.io/relaunch-2022"
       GATSBY_OWM_API_KEY: ${{ secrets.GATSBY_OWM_API_KEY }}
       GATSBY_FB_APPID: "555845005032870"
