@@ -35,6 +35,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 12
+          cache: 'npm'
+          cache-dependency-path: gatsby/package-lock.json
       - run: env
       - run: npm i
       - run: npm run build
