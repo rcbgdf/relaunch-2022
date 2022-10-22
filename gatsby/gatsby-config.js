@@ -23,7 +23,9 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap",
       options: {
         output: '/',
-        excludes: ['/intern', '/impressum', '/datenschutz', '/anleitung-oeffentlichkeitsarbeit', '/toastmaster-des-abends/']
+        excludes: ['/intern', '/impressum', '/datenschutz',
+        '/anleitung-oeffentlichkeitsarbeit', '/toastmaster-des-abends/',
+        '/anleitung-tda', '/vp-mitgliedschaft']
       },
     },
     `gatsby-plugin-image`,
