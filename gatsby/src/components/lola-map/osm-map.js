@@ -16,7 +16,7 @@ const lon=10.205826759338379
 
 const OsmMap = () => {
   return <>
-    <iframe width='100%' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
+    <iframe width='100%' height={350} frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
       src={`https://www.openstreetmap.org/export/embed.html?bbox=${lon0},${lat0},${lon1},${lat1}&layer=mapnik&marker=${lat},${lon}`}
       style={{border: '1px', solid: true, black: true}}>
     </iframe>
