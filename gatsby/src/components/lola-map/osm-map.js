@@ -4,7 +4,6 @@ import { StaticImage  } from "gatsby-plugin-image"
 
 import "./osm-map.scss"
 
-
 const lon0=10.204504430294039
 const lat0=53.49484826469885
 
@@ -36,21 +35,5 @@ const Map = () => {
     </div>
 
 }
-
-// <LealetMap center={position} zoom={15} scrollWheelZoom={false}>
-// <TileLayer
-//   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-//   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-// />
-// <Marker position={position}>
-//   <Popup>
-//   Rednerclub Bergedorf im:<br/>
-//   LOLA Kulturzentrum<br/>
-//   Lohbrügger Landstr. 8<br/>
-//   21031 Hamburg
-//   </Popup>
-// </Marker>
-// </LealetMap>
-
 
 export default Map
