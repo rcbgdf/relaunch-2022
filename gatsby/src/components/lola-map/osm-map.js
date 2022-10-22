@@ -28,9 +28,8 @@ const OsmMap = () => {
 const Map = () => {
   const cookieConsent = getCookieConsentValue()
   console.log('cookieConsent='+cookieConsent)
-  return cookieConsent
-  ? <OsmMap/>
-  : <div className='staticOsmImage'>
+  if(cookieConsent) return <OsmMap/>
+  return <div className='staticOsmImage'>
       <StaticImage transformOptions={{fit: "inside"}} alt="Anfahrt Platzhalter" src="../../../static/images/osm-placeholder.png"/>
     </div>
 
