@@ -41,9 +41,11 @@ const image_gross = getImage({gatsbyImageData: img337})
 //console.log(process.env.GATSBY_HERO_VIDEO_URL)
   return (
     <div className="player-wrapper">
-      <video autoPlay muted playsInline>
-        <source src={process.env.GATSBY_HERO_VIDEO_URL} type="video/mp4" />
-      </video>
+      <div className="video-container">
+        <video autoPlay muted playsInline>
+          <source src={process.env.GATSBY_HERO_VIDEO_URL} type="video/mp4" />
+        </video>
+      </div>
       <div className="backdrop">
         <Container fluid>
           <Row>
