@@ -86,8 +86,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Toastmasters - Rednerclub Bergedorf`,
+        short_name: `RCB`,
         start_url: `/`,
         background_color: `#54c4e0`,
         theme_color: `#54c4e0`,
