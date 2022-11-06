@@ -3,7 +3,6 @@ const fs = require(`fs-extra`)
 
 // const wasWirMachen = require('./src/content-data/was-wir-machen.json');
 
-// const { createRemoteFileNode } = require("gatsby-source-filesystem");
 const createClubabendPages = async ({createPage, graphql, reporter}) => {
   const result = await graphql(`
     query ClubabendQuery {
@@ -68,6 +67,101 @@ const createClubabendPages = async ({createPage, graphql, reporter}) => {
       // as a GraphQL variable to query for data from the markdown file.
       context: {
         id: p,
+        pagePath: p,
+        beitrag: node,
+        next,
+        previous,
+      },
+    })
+  })
+}
+
+const createBlogPages = async ({createPage, graphql, reporter}) => {
+  const result = await graphql(`
+    query Blog {
+      allStrapiBlogbeitrag(sort: { fields: published_at, order: DESC }) {
+        pageInfo {
+          perPage
+        }
+        edges {
+          node {
+            id
+            Keywords
+            Slug
+            Titel
+            Teaser
+            published_at
+            Inhalt
+            Beitragsbild {
+              url
+              localFile {
+                id
+                childImageSharp {
+                  resize {
+                    src
+                    width
+                    height
+                    aspectRatio
+                    originalName
+                  }
+                  gatsbyImageData(width: 500, blurredOptions: {width: 100})
+                }
+                childrenImageSharp {
+                  id
+                }
+              }
+            }
+            Avatar {
+              url
+              localFile {
+                id
+                childImageSharp {
+                  resize {
+                    src
+                    width
+                    height
+                    aspectRatio
+                    originalName
+                  }
+                  gatsbyImageData(width: 500, blurredOptions: {width: 100})
+                }
+                childrenImageSharp {
+                  id
+                }
+              }
+            }
+          }
+          next {
+            id
+            Titel
+          }
+          previous {
+            id
+            Titel
+          }
+        }
+      }
+    }
+  `)
+
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  const blogPostTemplate = path.resolve(
+    `./src/components/blog/blog-post.js`
+  )
+  result.data.allStrapiBlogbeitrag.edges.forEach(({ node, next, previous }) => {
+    const p = node.Slug
+    createPage({
+      path: p,
+      component: blogPostTemplate,
+      // In your blog post template's graphql query, you can use pagePath
+      // as a GraphQL variable to query for data from the markdown file.
+      context: {
+        id: node.id,
         pagePath: p,
         beitrag: node,
         next,
@@ -147,6 +241,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   console.log('create Clubabend...')
   await createClubabendPages({graphql, createPage, reporter})
+  console.log('create Blog...')
+  await createBlogPages({graphql, createPage, reporter})
   console.log('create remote Markdown pages...')
   await createSimpleMarkdownPages({graphql, createPage, reporter})
   console.log('create lokale Markdown pages...')

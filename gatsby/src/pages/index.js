@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import Seo from "../components/seo/seo"
 import BoardMemberCard from "../components/board/board-member-card"
+import BlogPosts from "../components/blog/blog-posts"
 import ClubabendPosts from "../components/clubabend-post/clubabend-posts"
 import LolaMap from "../components/lola-map/osm-map"
 import IconedItemList from "../components/iconed-item-list/iconed-item-list"
@@ -31,7 +32,7 @@ import "./index.scss"
 import ResponsivePlayer from "../components/responsive-player/responsive-player"
 
 const IndexPage = ({ data }) => {
-  const { allStrapiVorstandsmitglieds, allStrapiClubabends, allLocalContentWasWirSoMachen, site } = data
+  const { allStrapiVorstandsmitglieds, allStrapiBlogbeitrag, allStrapiClubabends, allLocalContentWasWirSoMachen, site } = data
 
   return (
     <Layout>
@@ -202,6 +203,14 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
+      <section id="blog" className="section-a">
+        <div className="large-container">
+          <hr/>
+          <h2 className="section-title">Rednerclub Bergedorfs Blog</h2>
+          <BlogPosts data={allStrapiBlogbeitrag}></BlogPosts>
+        </div>
+      </section>
+
       <section className="section-b">
         <div className="large-container">
           <h2 className="section-title">Das RCB-Vorstandsteam</h2>
@@ -296,6 +305,37 @@ export const query = graphql`
           }
           titel
           datum
+        }
+      }
+    }
+    allStrapiBlogbeitrag(sort: { fields: published_at, order: DESC }) {
+      pageInfo {
+        perPage
+      }
+      edges {
+        node {
+          id
+          published_at
+          Slug
+          Keywords
+          Titel
+          Teaser
+          Beitragsbild {
+            url
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 500,
+                  blurredOptions: {width: 100},
+                  placeholder: BLURRED,
+                  aspectRatio: 1.8,
+                  layout: FULL_WIDTH,
+                  transformOptions: {fit: CONTAIN, trim: 1.5},
+                  formats: PNG,
+                  backgroundColor: "#ffffff")
+              }
+            }
+          }
         }
       }
     }
