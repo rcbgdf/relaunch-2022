@@ -66,7 +66,11 @@ const lesezeit = (post) => {
 }
 
 const autorInfo = (post) => {
-  return post.AutorInfo ? <Reactmarkdown remarkPlugins={[gfm]}>{post.AutorInfo}</Reactmarkdown> : ''
+  const von = post.Autor ? ` - ${post.Autor}` : '';
+  const autorInfo = post.AutorInfo ? <Reactmarkdown remarkPlugins={[gfm]}>{`${post.AutorInfo} ${von}`}</Reactmarkdown> : '';
+  return <div className="autor-info">
+      {autorInfo}
+      </div>
 }
 
 const BlogPostPage = ({ data, pageContext }) => {
