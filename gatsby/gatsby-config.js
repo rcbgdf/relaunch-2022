@@ -61,7 +61,7 @@ module.exports = {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: `${process.env.STRAPI_API_URL}`,
-        collectionTypes: ["clubabends", "vorstandsmitglieds"],
+        collectionTypes: ["clubabends", "vorstandsmitglieds", "blogbeitrag"],
         singleTypes: ["termine", "naechster-clubabend"],
         queryLimit: 1000,
       },

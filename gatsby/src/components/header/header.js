@@ -18,6 +18,7 @@ function Header() {
             <Nav.Link href="/naechster-termin">Nächster Termin</Nav.Link>
             <Nav.Link href="/termine">Termine</Nav.Link>
             <Nav.Link href="/#clubleben">Clubleben</Nav.Link>
+            <Nav.Link href="/#blog">Blog</Nav.Link>
             <Nav.Link href="/mitglied-werden">Du möchtest Mitglied werden?</Nav.Link>
             <Nav.Link href="/#kontakt">Kontakt</Nav.Link>
             <NavDropdown title="Intern">

@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Blogbeitraege",
+  "info": {
+    "name": "Blogbeitrag",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Keywords": {
+      "type": "string",
+      "required": true
+    },
+    "Beitragsbild": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "Autor": {
+      "type": "string"
+    },
+    "Datum": {
+      "type": "date"
+    },
+    "Inhalt": {
+      "type": "richtext",
+      "required": true
+    },
+    "Teaser": {
+      "type": "string",
+      "required": true
+    },
+    "Lesezeit": {
+      "type": "integer"
+    },
+    "Avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "AutorInfo": {
+      "type": "richtext"
+    }
+  }
+}
