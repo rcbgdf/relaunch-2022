@@ -181,7 +181,7 @@ const IndexPage = ({ data }) => {
                 haben.
               </p>
               <p>Hier
-                <a aria-label="fb-home" href="https://www.facebook.com/Rednerclub-Bergedorf-174688412674869" className="inline-logo" rel="noreferrer" target="_blank"><StaticImage width={30} height={30} src="https://www.cnet.de/wp-content/uploads/2015/12/facebook-ios-icon.jpg"/></a>
+                <a aria-label="fb-home" href="https://www.facebook.com/Rednerclub-Bergedorf-174688412674869" className="inline-logo" rel="noreferrer" target="_blank"><StaticImage width={30} height={30} src="/images/facebook-ios-icon.jpg"/></a>
                 und <a aria-label="ig-home" href="https://www.instagram.com/toastmasters_rednerclub/" className="inline-logo" rel="noreferrer" target="_blank"><StaticImage width={30} height={30} src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/600px-Instagram_logo_2016.svg.png" alt="Instagram"/></a>
                 findest du unsere brandaktuellen Infos.</p>
             </Col>
