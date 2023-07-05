@@ -1,6 +1,6 @@
 ---
 path: "/impressum"
-date: "2022-10-22"
+date: "2023-06-05"
 title: "Impressum"
 ---
 
