@@ -10,28 +10,29 @@ title: "Impressum"
 Angaben gemäß § 5 TMG
 
 ```
-Tilo Thiele
-Anne-Becker-Ring 8
-21031 Hamburg
+Hans Ruzanksa
+Elly-Heuß-Nnapp-Ring 48
+21035 Hamburg
 ```
 
 Vertreten durch:
 ```
-Tilo Thiele
+Hans Ruzanska (Clubpräsident)
 ```
 
 Kontakt:
 ```
-Telefon: 0173-6330676
-E-Mail: tilo.thiele@hamburg.de
+Telefon: 0160 95654468
+E-Mail: hans.ruzanska@alice.de
 ```
 
 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
 ```
-Tilo Thiele
-Anne-Becker-Ring 8
-21031 Hamburg
+Hans Ruzanksa
+Elly-Heuß-Nnapp-Ring 48
+21035 Hamburg
 ```
+
 
 ## Haftungsausschluss:
 
