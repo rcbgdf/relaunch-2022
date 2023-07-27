@@ -31,7 +31,8 @@ import_mysql_table() {
     echo "import mysql table $1 - columns=$2"
 CSV_FILE=`realpath $BASEDIR/$1.csv`
 sudo mysql -uroot $MYSQL_DB_NAME <<EOF
-truncate table $1;
+-- truncate table $1;
+drop table if exists $1;
 LOAD DATA INFILE '$CSV_FILE'
 INTO TABLE $1
 FIELDS TERMINATED BY ','
@@ -64,7 +65,9 @@ pull_collection "clubabende" "_id,titel,datum,inhalt,createdAt,updatedAt,__v,bei
 #pull_collection "strapi_role" "_id,name,code,description,createdAt,updatedAt,__v"
 #pull_collection "strapi_webhooks" "_id,name,url,headers,events,enabled,createdAt,updatedAt,__v"
 #pull_collection "termines" "_id,inhalt,createdAt,updatedAt,__v,created_by,updated_by"
-pull_collection "upload_file" "_id,name,alternativeText,caption,hash,ext,mime,size,idth,height,url,formats,provider,related,createdAt,updatedAt,__v,created_by,updated_by,provider_metadata"
+
+#pull_collection "upload_file" "_id,name,alternativeText,caption,hash,ext,mime,size,width,height,url,formats,provider,createdAt,updatedAt,__v,created_by,updated_by,provider_metadata"
+
 ##pull_collection users-permissions_permission --type=csv --fields "" $IMPORT_MONGO_DB_URI
 ##pull_collection users-permissions_role --type=csv --fields "" $IMPORT_MONGO_DB_URI
 ##pull_collection users-permissions_user --type=csv --fields "" $IMPORT_MONGO_DB_URI
