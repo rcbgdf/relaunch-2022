@@ -109,8 +109,6 @@ create table termines (\
 ) engine=InnoDB default charset=utf8mb4 collate=utf8mb4_unicode_ci;"
 pull_collection "$PRE_STMT" "termines" "_id,inhalt,createdAt,updatedAt,__v,created_by,updated_by"
 
-# _id,name,alternativeText,caption,hash,ext,mime,size,width,height,url,formats,provider,created_at,updated_at,created_by,updated_by,provider_metadata
-# 5f5e81d8ef03b600177d9274,portrait-thomasp-150x150.jpg,,,portrait_thomasp_150x150_10b0333fb2,.jpg,image/jpeg,4.44,150,150,https://res.cloudinary.com/dgibmteg8/image/upload/v1600029144/portrait_thomasp_150x150_10b0333fb2.jpg,,cloudinary,2020-09-13,2021-07-09,5f25e7a5a0536c001712d60d,5f25e7a5a0536c001712d60d,"{""public_id"":""portrait_thomasp_150x150_10b0333fb2"",""resource_type"":""image""}"
 PRE_STMT="drop table if exists upload_file;\
 create table upload_file (\
     id int(10) unsigned not null auto_increment,\
