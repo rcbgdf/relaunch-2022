@@ -63,8 +63,9 @@ pull_collection() {
     echo "collection=$2 fields=$3"
     MYSQL_COLUMNS=`echo "$3" | sed -r 's/_id/mongo_id/' | sed -r 's/createdAt/created_at/' | sed -r 's/createdBy/mongo_created_by/' | sed -r 's/updatedAt/updated_at/' | sed -r 's/updated_by/mongo_updated_by/' | sed -r 's/updatedBy/mongo_updated_by/' | sed -r 's/created_by/mongo_created_by/'`
     echo "$MYSQL_COLUMNS"
-    mongoexport -c "$2" --type=csv --fields "$3" $IMPORT_MONGO_DB_URI | sed -r 's/ObjectId.([^\)]+)./\1/g' | sed -r 's/createdAt/created_at/' | sed -r 's/createdBy/mongo_created_by/' | sed -r 's/updatedAt/updated_at/' | sed -r 's/updatedBy/mongo_updated_by/' | sed -r 's/T[0-9]{2}\:[0-9]{2}\:[0-9]{2}\.[0-9]{1,3}Z//g' > $BASEDIR/$2.csv
     TBL=${2//-/_}
+    TBL="l_$TBL"
+    mongoexport -c "$2" --type=csv --fields "$3" $IMPORT_MONGO_DB_URI | sed -r 's/ObjectId.([^\)]+)./\1/g' | sed -r 's/createdAt/created_at/' | sed -r 's/createdBy/mongo_created_by/' | sed -r 's/updatedAt/updated_at/' | sed -r 's/updatedBy/mongo_updated_by/' | sed -r 's/T[0-9]{2}\:[0-9]{2}\:[0-9]{2}\.[0-9]{1,3}Z//g' > $BASEDIR/$TBL.csv
 
 sudo mysql -uroot $MYSQL_DB_NAME <<EOF
 $1
@@ -78,8 +79,8 @@ EOF
 #EOF
 # _id,inhalt,created_at,updated_at,__v,created_by,updated_by
 
-PRE_STMT="drop table if exists singletype1s;\
-create table singletype1s (\
+PRE_STMT="drop table if exists l_singletype1s;\
+create table l_singletype1s (\
     id int(10) unsigned not null auto_increment,\
     inhalt varchar(10000),\
     primary key (id)\
@@ -89,8 +90,8 @@ pull_collection "$PRE_STMT" singletype1s "_id,inhalt,createdAt,updatedAt,__v,cre
 # _id,username,registrationToken,firstname,lastname,email,password,created_at,updated_at,__v,resetPasswordToken,preferedLanguage
 # 5f25e7a5a0536c001712d60d,,,Tilo,Thiele,tilo.thiele@hamburg.de,$2a$10$XFn0vrMqrh5blfM6OcouFekuNqTMchfCMePUGCybAnGli4Q3N2LCm,2020-08-01,2020-08-01,0,,de
 
-PRE_STMT="drop table if exists strapi_administrator;\
-create table strapi_administrator (\
+PRE_STMT="drop table if exists l_strapi_administrator;\
+create table l_strapi_administrator (\
     id int(10) unsigned not null auto_increment,\
     inhalt varchar(10000),\
     username varchar(50),\
@@ -101,16 +102,16 @@ create table strapi_administrator (\
 ) engine=InnoDB default charset=utf8mb4 collate=utf8mb4_unicode_ci;"
 pull_collection "$PRE_STMT" "strapi_administrator" "_id,username,firstname,lastname,email,createdAt,updatedAt,__v"
 
-PRE_STMT="drop table if exists termines;\
-create table termines (\
+PRE_STMT="drop table if exists l_termines;\
+create table l_termines (\
     id int(10) unsigned not null auto_increment,\
     inhalt varchar(10000),\
     primary key (id)\
 ) engine=InnoDB default charset=utf8mb4 collate=utf8mb4_unicode_ci;"
 pull_collection "$PRE_STMT" "termines" "_id,inhalt,createdAt,updatedAt,__v,created_by,updated_by"
 
-PRE_STMT="drop table if exists upload_file;\
-create table upload_file (\
+PRE_STMT="drop table if exists l_upload_file;\
+create table l_upload_file (\
     id int(10) unsigned not null auto_increment,\
     name varchar(100),\
     alternativeText varchar(100),\
@@ -128,8 +129,8 @@ create table upload_file (\
 ) engine=InnoDB default charset=utf8mb4 collate=utf8mb4_unicode_ci;"
 pull_collection "$PRE_STMT" "upload_file" "_id,name,alternativeText,caption,ext,mime,size,width,height,url,formats,provider,createdAt,updatedAt,created_by,updated_by,provider_metadata"
 
-PRE_STMT="drop table if exists naechster_clubabends;\
-create table naechster_clubabends (\
+PRE_STMT="drop table if exists l_naechster_clubabends;\
+create table l_naechster_clubabends (\
     id int(10) unsigned not null auto_increment,\
     datum timestamp,\
     inhalt varchar(10000),\
@@ -137,8 +138,8 @@ create table naechster_clubabends (\
 ) engine=InnoDB default charset=utf8mb4 collate=utf8mb4_unicode_ci;"
 pull_collection "$PRE_STMT" "naechster_clubabends" "_id,Datum,inhalt,createdAt,updatedAt,__v,created_by,updated_by"
 
-PRE_STMT="drop table if exists core_store;\
-create table core_store (\
+PRE_STMT="drop table if exists l_core_store;\
+create table l_core_store (\
     id int(10) unsigned not null auto_increment,\
     key_ varchar(100),\
     environment varchar(100),\
@@ -149,8 +150,8 @@ create table core_store (\
 ) engine=InnoDB default charset=utf8mb4 collate=utf8mb4_unicode_ci;"
 pull_collection "$PRE_STMT" "core_store" "_id,key_,environment,tag,value,type"
 
-PRE_STMT="drop table if exists clubabende;\
-create table clubabende (\
+PRE_STMT="drop table if exists l_clubabende;\
+create table l_clubabende (\
     id int(10) unsigned not null auto_increment,\
     titel varchar(255) not null,\
     datum date not null,\
