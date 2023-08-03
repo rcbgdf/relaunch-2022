@@ -2,29 +2,29 @@
   "name": "rcb-strapi-v-4",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "RCB Headless Backend",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-i18n": "4.3.9",
-    "@strapi/plugin-users-permissions": "4.3.9",
-    "@strapi/strapi": "4.3.9",
+    "@strapi/plugin-i18n": "4.12.1",
+    "@strapi/plugin-users-permissions": "4.12.1",
+    "@strapi/provider-upload-cloudinary": "^4.12.1",
+    "@strapi/strapi": "4.12.1",
     "better-sqlite3": "7.4.6",
     "mysql": "^2.18.1"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "tilo.thiele@hamburg.de"
   },
   "strapi": {
     "uuid": "1b01e2b5-ee50-4518-9e5c-947da8eed69b"
   },
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
+    "node": ">=16.x.x <=18.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
