@@ -23,7 +23,7 @@ Eine Anleitung für den VP Öffentlichkeitsarbeit zum [Veröffentlichen der Beit
 * [10100_RCB_Namensschilder_Juli_2019_VORLAGE](https://res.cloudinary.com/dgibmteg8/raw/upload/v1625845542/rcb-downloads/10100_RCB_Namensschilder_Juli_2019_VORLAGE.docx)
 * [30070_Die_Aemter_des_Abends](https://res.cloudinary.com/dgibmteg8/image/upload/v1625845544/rcb-downloads/30070_Die_Aemter_des_Abends.pdf)
 * [30080_Mentoren_Leitfaden](https://res.cloudinary.com/dgibmteg8/image/upload/v1625845544/rcb-downloads/30080_Mentoren_Leitfaden_1119.pdf)
-* [30010_Toastmaster_des_Abends_Checkliste](https://res.cloudinary.com/dgibmteg8/raw/upload/v1625845544/rcb-downloads/30010_Toastmaster_des_Abends_Checkliste-1.docx)
+* [30010_Toastmaster_des_Abends_Checkliste](https://res.cloudinary.com/dgibmteg8/image/upload/v1693859038/rcb-downloads/30010_Toastmaster_des_Abends_Checkliste.pdf)
 * [30020_Wort_des_Tages_Checkliste](https://res.cloudinary.com/dgibmteg8/image/upload/v1625845543/rcb-downloads/30020_Wort_des_Tages_Checkliste.pdf)
 * [30030_Checkliste-Gesamtbeobachter](https://res.cloudinary.com/dgibmteg8/image/upload/v1625845543/rcb-downloads/30030_Checkliste-Gesamtbeobachter_neu.pdf)
 * [30040_Stegreifredenmoderator_Checkliste](https://res.cloudinary.com/dgibmteg8/image/upload/v1625845543/rcb-downloads/30040_Stegreifredenmoderator_Checkliste.pdf)
