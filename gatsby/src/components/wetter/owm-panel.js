@@ -60,7 +60,7 @@ export default function OwmPanel({beginn}) {
     const desc = record && `am ${record.fuer} - ${t1} °C ${feels_like}${record.humidity} % rel. Luftf. - Vorhersage vom ${record.vom}`
     return <div className="float-right">
         {record ?
-            <div>{record.weather.map(w => <img key={w.id} width={100} height={100} src={`http://openweathermap.org/img/wn/${w.icon}@2x.png`} alt={`${w.description} - ${desc}`} title={`${w.description} - ${desc}`}/>)}</div>
+            <div>{record.weather.map(w => <img key={w.id} width={100} height={100} src={`https://openweathermap.org/img/wn/${w.icon}@2x.png`} alt={`${w.description} - ${desc}`} title={`${w.description} - ${desc}`}/>)}</div>
          : <p>leider keine Wetterdaten vorhanden</p>}
         </div>
 }
