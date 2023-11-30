@@ -15,7 +15,7 @@ const NotFoundPage = () => (
             <h1>Ups... diese Seite können wir nicht finden.</h1>
           </Col>
           <Col md={6}>
-            <p><StaticImage width={400} src="https://www.woman.at/_storage/asset/3996009/storage/womanat:key-visual/file/44109012/suchen.jpg"/></p>
+            <p><StaticImage width={400} src="../static/images/logos/rcb-logo-98x58.png"/></p>
           </Col>
         </Row>
       </Container>
