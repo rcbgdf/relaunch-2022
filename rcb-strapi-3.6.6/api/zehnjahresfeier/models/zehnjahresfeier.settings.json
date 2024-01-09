@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "zehnjahresfeiers",
+  "info": {
+    "name": "zehnjahresfeier"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Inhalt": {
+      "type": "richtext"
+    }
+  }
+}
