@@ -210,12 +210,8 @@ const createSimpleMarkdownPages = async ({createPage, graphql, reporter}) => {
     strapiNaechsterClubabend {
       inhalt id updatedAt Datum
     }
-    # strapiZehnjahresfeier {
-    #   inhalt id updatedAt Datum
-    # }
   }`)
   const markDowns = []
-//  markDowns.push(['10-Jahresfeier', '/10-jahresfeier', pageResult.data.strapiZehnjahresfeier])
   markDowns.push(['Nächste Termine', '/termine', pageResult.data.strapiTermine])
   markDowns.push(['Nächster Termin', '/naechster-termin', pageResult.data.strapiNaechsterClubabend])
   markDowns.forEach(p => {
