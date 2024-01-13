@@ -1,0 +1,19 @@
+.ribbon {
+    position: absolute;
+    top: 50px;
+    left: -95px;
+    width: 400px;
+    height: 100px;
+    background-color: red;
+    transform: rotate(-45deg);
+    z-index: 10010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ribbon-text {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}

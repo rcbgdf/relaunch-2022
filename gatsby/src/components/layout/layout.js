@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import Header from "../header/header"
 import Footer from "../footer/footer"
 import CookieConsent from "react-cookie-consent"
+import DiagonalBadge from "../diagonal-badge/diagonal-badge"
 
 import "./layout.scss"
 
@@ -18,6 +19,7 @@ import "./layout.scss"
 const Layout = ({ children }) => {
   return (
     <div id="wrap">
+      <DiagonalBadge ribbonText="10-Jahresfeier</br>am 17.2.2024" />
       <div id="header">
         <div className="container">
           <Header/>
