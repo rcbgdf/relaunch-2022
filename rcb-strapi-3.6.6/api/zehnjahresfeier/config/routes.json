@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/zehnjahresfeier",
+      "handler": "zehnjahresfeier.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/zehnjahresfeier",
+      "handler": "zehnjahresfeier.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/zehnjahresfeier",
+      "handler": "zehnjahresfeier.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
