@@ -15,7 +15,7 @@ const NotFoundPage = () => (
             <h1>Ups... diese Seite können wir nicht finden.</h1>
           </Col>
           <Col md={6}>
-            <p><StaticImage width={400} src="../static/images/logos/rcb-logo-98x58.png"/></p>
+            <p><StaticImage width={400} src="../static/logos/rcb-logo-98x58.png"/></p>
           </Col>
         </Row>
       </Container>

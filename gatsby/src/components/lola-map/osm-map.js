@@ -20,7 +20,7 @@ const Map = () => {
 
   if(cookieConsent)
   return <div>
-      <iframe width='100%' height={350} frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
+      <iframe width='100%' height={350} frameborder='0' scrolling='no' marginheight='0' marginwidth='0' title='OSM Map zur Lola'
         src={`https://www.openstreetmap.org/export/embed.html?bbox=${lon0},${lat0},${lon1},${lat1}&layer=mapnik&marker=${lat},${lon}`}
         style={{border: '1px', solid: true, black: true}}>
       </iframe>
