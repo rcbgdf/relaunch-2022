@@ -62,8 +62,8 @@ module.exports = {
       options: {
         apiURL: `${process.env.STRAPI_API_URL}`,
         collectionTypes: ["clubabends", "vorstandsmitglieds", "blogbeitrag"],
-        singleTypes: ["termine", "naechster-clubabend"],
-        queryLimit: 1000,
+        singleTypes: ["termine", "naechster-clubabend", "zehnjahresfeier"],
+        queryLimit: 12,
       },
     },
     {

@@ -49,13 +49,13 @@ const MailVerteiler = () => {
 //    console.log(obj)
   }
 
-  const sendMailHandler = ({from, replyTo, subject, body}) => {
-    setMessage({
-      variant: 'success',
-      heading: 'Die Mails wurden versendet.',
-      text: `von=${from}, antwortAn=${replyTo}, betreff=${subject}, nachricht=${body}`
-    })
-  }
+  // const sendMailHandler = ({from, replyTo, subject, body}) => {
+  //   setMessage({
+  //     variant: 'success',
+  //     heading: 'Die Mails wurden versendet.',
+  //     text: `von=${from}, antwortAn=${replyTo}, betreff=${subject}, nachricht=${body}`
+  //   })
+  // }
 
   const {logged, user} = loginState
   const {_profile} = user

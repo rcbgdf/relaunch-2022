@@ -10,7 +10,7 @@ export default function TextCaroussell({ items }) {
     <div className="carousel-wrapper">
       <Carousel pause={true}>
         {items.map(item => (
-          <Carousel.Item>
+          <Carousel.Item key={item.title}>
             <GatsbyImage className="d-block w-100" alt="TMI" image={item.image}/>
             <Carousel.Caption>
                 <h3>{item.title}</h3>

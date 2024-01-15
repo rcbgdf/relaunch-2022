@@ -10,11 +10,13 @@ import IconedItemList from "../components/iconed-item-list/iconed-item-list"
 import InfoBox from "../components/info-box/info-box"
 import TextCarousel from "../components/text-carousell/text-carousell"
 import ContactForm from "../components/contact-form/contact-form"
-import { Helmet } from "react-helmet"
+
+import Reactmarkdown from "react-markdown"
+import gfm from 'remark-gfm'
 
 import { Container, Row, Col } from "react-bootstrap"
 import { graphql } from "gatsby"
-import { StaticImage, getImage  } from "gatsby-plugin-image"
+import { GatsbyImage, StaticImage, getImage  } from "gatsby-plugin-image"
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faExclamation,
@@ -32,13 +34,44 @@ import "./index.scss"
 import ResponsivePlayer from "../components/responsive-player/responsive-player"
 
 const IndexPage = ({ data }) => {
-  const { allStrapiVorstandsmitglieds, allStrapiBlogbeitrag, allStrapiClubabends, allLocalContentWasWirSoMachen, site } = data
+  const { allStrapiVorstandsmitglieds,
+    allStrapiBlogbeitrag,
+    allStrapiClubabends,
+    allLocalContentWasWirSoMachen,
+    strapiZehnjahresfeier,
+    site } = data
 
   return (
     <Layout>
       <Seo title="Home" keywords="rethorik,hamburg,bergedorf,toastmasters,reden"/>
       <section>
         <ResponsivePlayer />
+      </section>
+
+      <section id="10-jahresfeier-teaser" className="section-b">
+        <Container>
+        <Row>
+            <Col md={12}>
+              <h2 className="section-title">Komm' und feier mit uns unser 10-Jähriges Jubiläum!</h2>
+              <Reactmarkdown remarkPlugins={[gfm]}>{strapiZehnjahresfeier.Teaser}</Reactmarkdown>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12}>
+            <p>Klicke <a href="/zehnjahresfeier">hier für die Details.</a></p>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section id="10-jahresfeier-teaser-image" className="section-b">
+        <Container>
+          <Row>
+            <Col md={12}>
+              <GatsbyImage alt='10-Jahresfeier Teaser' image={getImage(strapiZehnjahresfeier.TeaserBild.localFile)} />
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       <section id="was-du-willst" className="section-a">
@@ -93,7 +126,7 @@ const IndexPage = ({ data }) => {
         </Container>
       </section>
 
-      <section id="was-wir-machen" className="section-b">
+      <section id="wer-wir-sind" className="section-b">
         <Container>
           <Row>
             <Col md={12}>
@@ -181,7 +214,7 @@ const IndexPage = ({ data }) => {
                 haben.
               </p>
               <p>Hier
-                <a aria-label="fb-home" href="https://www.facebook.com/Rednerclub-Bergedorf-174688412674869" className="inline-logo" rel="noreferrer" target="_blank"><StaticImage width={30} height={30} src="../../static/images/facebook-ios-icon.jpg"/></a>
+                <a aria-label="fb-home" href="https://www.facebook.com/Rednerclub-Bergedorf-174688412674869" className="inline-logo" rel="noreferrer" target="_blank"><StaticImage width={30} height={30} src="../../static/images/facebook-ios-icon.jpg" alt="Facebook-Logo"/></a>
                 und <a aria-label="ig-home" href="https://www.instagram.com/toastmasters_rednerclub/" className="inline-logo" rel="noreferrer" target="_blank"><StaticImage width={30} height={30} src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/600px-Instagram_logo_2016.svg.png" alt="Instagram"/></a>
                 findest du unsere brandaktuellen Infos.</p>
             </Col>
@@ -267,6 +300,23 @@ export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
+    strapiZehnjahresfeier {
+      Teaser
+      TeaserBild {
+        url
+        localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 770
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                  transformOptions: {fit: COVER}
+                  aspectRatio: 1.8
+                )
+              }
+            }
+      }
+    }
     allStrapiVorstandsmitglieds(sort: { fields: ord, order: ASC}) {
       edges {
         node {
@@ -292,13 +342,13 @@ export const query = graphql`
             localFile {
               childImageSharp {
                 gatsbyImageData(
-                  width: 500,
+                  width: 700,
                   blurredOptions: {width: 10},
                   placeholder: BLURRED,
                   aspectRatio: 1,
                   transformOptions: {cropFocus: CENTER},
                   layout: FULL_WIDTH,
-                  formats: PNG,
+                  formats: JPG,
                   backgroundColor: "#ffffff")
               }
             }
@@ -332,7 +382,8 @@ export const query = graphql`
                   layout: FULL_WIDTH,
                   transformOptions: {fit: CONTAIN, trim: 1.5},
                   formats: PNG,
-                  backgroundColor: "#ffffff")
+                  backgroundColor: "#ffffff"
+                  )
               }
             }
           }

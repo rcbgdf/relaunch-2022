@@ -11,7 +11,11 @@
     align-items: center;
     justify-content: center;
 }
-.ribbon-text {
+.ribbon-text a:hover {
+    text-decoration: none;
+    color: #d0d0d0;
+}
+.ribbon-text a {
     color: white;
     font-size: 28px;
     font-weight: bold;

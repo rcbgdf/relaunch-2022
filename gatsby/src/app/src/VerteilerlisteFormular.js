@@ -1,8 +1,6 @@
 import React from 'react'
 import moment from "moment"
-import {Button,Table,Row,Col,Form} from "react-bootstrap"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import { faEdit, faTrash, faPlus } from '@fortawesome/free-solid-svg-icons'
+import {Row,Col} from "react-bootstrap"
 import EditableDataTable from './EditableDataTable';
 import "./VerteilerlisteFormular.scss"
 
