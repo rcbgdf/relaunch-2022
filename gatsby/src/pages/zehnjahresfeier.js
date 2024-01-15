@@ -59,7 +59,6 @@ const ZehnjahresfeierPage = ({ data }) => {
         <Container>
           <Row>
             <Col md={12}>
-              <h2 className="section-title">Komm' und feier mit uns unser 10-Jähriges Jubiläum</h2>
               <Reactmarkdown remarkPlugins={[gfm]}>{strapiZehnjahresfeier.Inhalt}</Reactmarkdown>
             </Col>
             </Row>
