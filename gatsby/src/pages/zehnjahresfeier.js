@@ -55,16 +55,6 @@ const ZehnjahresfeierPage = ({ data }) => {
       </Container>
       </section>
 
-      <section id="10-jahresfeier-teaser" className="section-b">
-        <Container>
-          <Row>
-            <Col md={12}>
-              <Reactmarkdown remarkPlugins={[gfm]}>{strapiZehnjahresfeier.Inhalt}</Reactmarkdown>
-            </Col>
-            </Row>
-        </Container>
-      </section>
-
       <section id="10-jahresfeier-teaser-image" className="section-b">
         <Container>
           <Row>
@@ -72,6 +62,16 @@ const ZehnjahresfeierPage = ({ data }) => {
               <GatsbyImage alt='10-Jahresfeier Teaser' image={getImage(strapiZehnjahresfeier.Beitragsbild.localFile)} />
             </Col>
           </Row>
+        </Container>
+      </section>
+    
+      <section id="10-jahresfeier-teaser" className="section-b">
+        <Container>
+          <Row>
+            <Col md={12}>
+              <Reactmarkdown remarkPlugins={[gfm]}>{strapiZehnjahresfeier.Inhalt}</Reactmarkdown>
+            </Col>
+            </Row>
         </Container>
       </section>
 
