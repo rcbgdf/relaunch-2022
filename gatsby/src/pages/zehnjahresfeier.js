@@ -145,7 +145,7 @@ export const query = graphql`
                   placeholder: BLURRED,
                   aspectRatio: 1.8,
                   layout: FULL_WIDTH,
-                  transformOptions: {fit: CONTAIN, trim: 1.5},
+                  transformOptions: {fit: CONTAIN},
                   formats: PNG,
                   backgroundColor: "#ffffff"
                   )
