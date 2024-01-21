@@ -140,13 +140,14 @@ export const query = graphql`
         localFile {
               childImageSharp {
                 gatsbyImageData(
-                  width: 500,
-                  blurredOptions: {width: 100},
+                 width: 500,
+                 blurredOptions: {width: 100},
                   placeholder: BLURRED,
-                  aspectRatio: 1.8,
+#                  aspectRatio: 1.8,
                   layout: FULL_WIDTH,
                   transformOptions: {fit: CONTAIN},
-                  formats: PNG,
+                  formats: WEBP,
+                  quality: 100,
                   backgroundColor: "#ffffff"
                   )
               }
