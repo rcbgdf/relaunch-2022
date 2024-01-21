@@ -26,7 +26,29 @@ const ZehnjahresfeierPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="Rednerclub Bergedorfs Zehnjahresfeier" keywords="rethorik,hamburg,bergedorf,toastmasters,reden"/>
-
+      {strapiZehnjahresfeier.Beitragsbild && <Helmet
+      meta={[
+        {
+          property: `og:title`,
+          content: `Rednerclub Bergedorf - Zehnjahresfeier am 17.2.2024`,
+        },{
+          property: `og:description`,
+          content: `Rednerclub Bergedorf feiert sein Zehnjähriges Bestehen am 17.2.2024`,
+        },{
+          property: `og:url`,
+          content: `${process.env.GATSBY_PUBLIC_URL}/zehnjahresfeier`,
+        },{
+          property: `fb:app_id`,
+          content: `${process.env.GATSBY_FB_APPID}`,
+        },{
+          property: `og:image`,
+          content: strapiZehnjahresfeier.Beitragsbild.url,
+        },{
+          property: `og:image:alt`,
+          content: `Rednerclub Bergedorf - Zehnjahresfeier am 17.2.2024`,
+        }]}
+      />}
+        
       <section id="10-jahresfeier-social-buttons" className="section-b">
         <Container>
       <Row className="pt-4">
