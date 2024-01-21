@@ -8,6 +8,7 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage  } from "gatsby-plugin-image"
 import Reactmarkdown from "react-markdown"
 import gfm from 'remark-gfm'
+import { Helmet } from "react-helmet"
 
 import { FacebookShareButton, FacebookIcon } from "react-share"
 import { WhatsappShareButton, WhatsappIcon } from "react-share"
@@ -48,7 +49,7 @@ const ZehnjahresfeierPage = ({ data }) => {
           content: `Rednerclub Bergedorf - Zehnjahresfeier am 17.2.2024`,
         }]}
       />}
-        
+
       <section id="10-jahresfeier-social-buttons" className="section-b">
         <Container>
       <Row className="pt-4">
@@ -86,7 +87,7 @@ const ZehnjahresfeierPage = ({ data }) => {
           </Row>
         </Container>
       </section>
-    
+
       <section id="10-jahresfeier-teaser" className="section-b">
         <Container>
           <Row>
@@ -139,12 +140,15 @@ export const query = graphql`
         localFile {
               childImageSharp {
                 gatsbyImageData(
-                  width: 770
-                  placeholder: BLURRED
-                  formats: [AUTO, WEBP, AVIF]
-                  transformOptions: {fit: COVER}
-                  aspectRatio: 1.8
-                )
+                  width: 500,
+                  blurredOptions: {width: 100},
+                  placeholder: BLURRED,
+                  aspectRatio: 1.8,
+                  layout: FULL_WIDTH,
+                  transformOptions: {fit: CONTAIN, trim: 1.5},
+                  formats: PNG,
+                  backgroundColor: "#ffffff"
+                  )
               }
             }
       }
