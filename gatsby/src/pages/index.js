@@ -48,7 +48,17 @@ const IndexPage = ({ data }) => {
         <ResponsivePlayer />
       </section>
 
-      <section id="10-jahresfeier-teaser" className="section-b">
+      <section id="10-jahresfeier-teaser-image" className="section-b">
+        <Container>
+          <Row>
+            <Col md={12}>
+              <GatsbyImage alt='10-Jahresfeier Teaser' image={getImage(strapiZehnjahresfeier.TeaserBild.localFile)} />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section id="zehnjahresfeier_teaser" className="section-b">
         <Container>
         <Row>
             <Col md={12}>
@@ -59,16 +69,6 @@ const IndexPage = ({ data }) => {
           <Row>
             <Col md={12}>
             <p>Klicke <a href="/zehnjahresfeier">hier für die Details.</a></p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      <section id="10-jahresfeier-teaser-image" className="section-b">
-        <Container>
-          <Row>
-            <Col md={12}>
-              <GatsbyImage alt='10-Jahresfeier Teaser' image={getImage(strapiZehnjahresfeier.TeaserBild.localFile)} />
             </Col>
           </Row>
         </Container>
@@ -307,12 +307,15 @@ export const query = graphql`
         localFile {
               childImageSharp {
                 gatsbyImageData(
-                  width: 770
-                  placeholder: BLURRED
-                  formats: [AUTO, WEBP, AVIF]
-                  transformOptions: {fit: COVER}
-                  aspectRatio: 1.8
-                )
+                  width: 500,
+                  blurredOptions: {width: 100},
+                  placeholder: BLURRED,
+                  aspectRatio: 1.8,
+                  layout: FULL_WIDTH,
+                  transformOptions: {fit: CONTAIN, trim: 1.5},
+                  formats: PNG,
+                  backgroundColor: "#ffffff"
+                  )
               }
             }
       }
