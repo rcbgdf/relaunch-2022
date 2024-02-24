@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
         <ResponsivePlayer />
       </section>
 
-      <section id="10-jahresfeier-teaser-image" className="section-b">
+      { /*<section id="10-jahresfeier-teaser-image" className="section-b">
         <Container>
           <Row>
             <Col md={12}>
@@ -72,7 +72,7 @@ const IndexPage = ({ data }) => {
             </Col>
           </Row>
         </Container>
-      </section>
+  </section> */}
 
       <section id="was-du-willst" className="section-a">
         <Container>
