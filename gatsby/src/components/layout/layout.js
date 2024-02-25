@@ -19,7 +19,7 @@ import "./layout.scss"
 const Layout = ({ children }) => {
   return (
     <div id="wrap">
-      <DiagonalBadge ribbonText="10-Jahresfeier</br>am 17.2.2024" />
+      { /*<DiagonalBadge ribbonText="10-Jahresfeier</br>am 17.2.2024" /> */ }
       <div id="header">
         <div className="container">
           <Header/>
