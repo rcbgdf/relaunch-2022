@@ -280,7 +280,7 @@ const IndexPage = ({ data }) => {
             <a href="https://www.toastmasters.org/Find-a-Club/02933296-rednerclub-bergedorf">
               Toastmasters International Club-Nr. 2933296
             </a>
-            {" · Area 3 · Division A · District 95"}
+            {" · Area 2 · Division A · District 95"}
           </div>
         </div>
         <div className="container d-flex justify-content-center">
