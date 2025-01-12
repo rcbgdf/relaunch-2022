@@ -1,6 +1,6 @@
 ---
 path: "/impressum"
-date: "2023-06-05"
+date: "2025-01-12"
 title: "Impressum"
 ---
 
@@ -10,27 +10,27 @@ title: "Impressum"
 Angaben gemäß § 5 TMG
 
 ```
-Hans Ruzanksa
-Elly-Heuß-Nnapp-Ring 48
-21035 Hamburg
+Silke Schnitter
+Am Knill 25d
+22147 Hamburg
 ```
 
 Vertreten durch:
 ```
-Hans Ruzanska (Clubpräsident)
+Silke Schnitter (Clubpräsidentin)
 ```
 
 Kontakt:
 ```
-Telefon: 0160 95654468
-E-Mail: hans.ruzanska@alice.de
+Telefon: 0179-4141425
+E-Mail: si.schnitter@web.de
 ```
 
 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
 ```
-Hans Ruzanksa
-Elly-Heuß-Nnapp-Ring 48
-21035 Hamburg
+Silke Schnitter
+Am Knill 25d
+22147 Hamburg
 ```
 
 
