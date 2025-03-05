@@ -22,8 +22,7 @@ Silke Schnitter (Clubpräsidentin)
 
 Kontakt:
 ```
-Telefon: 0179-4141425
-E-Mail: si.schnitter@web.de
+E-Mail: toastmasters@rc-bgdf.de
 ```
 
 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
