@@ -232,7 +232,8 @@ const IndexPage = ({ data }) => {
       <section id="clubleben" className="section-a">
         <div className="large-container">
           <h2 className="section-title">Erfahre, was bei uns los war:</h2>
-          <ClubabendPosts data={allStrapiClubabends}></ClubabendPosts>
+          <p>Dieser Abschnitt wird aktuell überarbeitet.</p>
+          {/* <ClubabendPosts data={allStrapiClubabends}></ClubabendPosts> */}
         </div>
       </section>
 

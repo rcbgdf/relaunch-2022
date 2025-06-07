@@ -239,8 +239,8 @@ const createSimpleMarkdownPages = async ({createPage, graphql, reporter}) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  console.log('create Clubabend...')
-  await createClubabendPages({graphql, createPage, reporter})
+//  console.log('create Clubabend...')
+//  await createClubabendPages({graphql, createPage, reporter})
   console.log('create Blog...')
   await createBlogPages({graphql, createPage, reporter})
   console.log('create remote Markdown pages...')
