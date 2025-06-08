@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
         buttonStyle={{ backgroundColor: "#29a3c2", color: "white", fontSize: "13px" }}
         expires={150}
       >
-        Unsere Website verwendet Cookies.
+        Unsere Website verwendet keine Cookies.
       </CookieConsent>
     </div>
   )
