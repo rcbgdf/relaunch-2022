@@ -10,14 +10,14 @@ title: "Impressum"
 Angaben gemäß § 5 TMG
 
 ```
-Silke Schnitter
-Am Knill 25d
-22147 Hamburg
+Gerhard Zittel
+Sander Str. 21 B
+21029 Hamburg
 ```
 
 Vertreten durch:
 ```
-Silke Schnitter (Clubpräsidentin)
+Gerhard Zittel (Clubpräsidentin)
 ```
 
 Kontakt:
@@ -27,9 +27,9 @@ E-Mail: toastmasters@rc-bgdf.de
 
 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
 ```
-Silke Schnitter
-Am Knill 25d
-22147 Hamburg
+Gerhard Zittel
+Sander Str. 21 B
+21029 Hamburg
 ```
 
 
