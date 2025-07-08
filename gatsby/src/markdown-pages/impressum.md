@@ -17,7 +17,7 @@ Sander Str. 21 B
 
 Vertreten durch:
 ```
-Gerhard Zittel (Clubpräsidentin)
+Gerhard Zittel (Clubpräsident)
 ```
 
 Kontakt:
