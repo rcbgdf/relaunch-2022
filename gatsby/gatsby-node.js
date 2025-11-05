@@ -212,7 +212,7 @@ const createSimpleMarkdownPages = async ({createPage, graphql, reporter}) => {
     }
   }`)
   const markDowns = []
-  markDowns.push(['Nächste Termine', '/termine', pageResult.data.strapiTermine])
+  markDowns.push(['Termine', '/termine', pageResult.data.strapiTermine])
   markDowns.push(['Nächster Termin', '/naechster-termin', pageResult.data.strapiNaechsterClubabend])
   markDowns.forEach(p => {
     createPage({

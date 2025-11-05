@@ -32,7 +32,7 @@ const ClubabendPostCard = ({
             <Link to={`/${id}`}>{titel}</Link>
           </strong>
         </h4>
-        <h5>Clubabend am {moment(datum).format("D.M.YYYY")}</h5>
+        { /* <h5>Clubabend am {moment(datum).format("D.M.YYYY")}</h5> */ }
         <p>{md2html(inhaltMarkdown)}</p>
       </div>
     </div>
