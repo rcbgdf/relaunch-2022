@@ -56,7 +56,7 @@ const nav = ({post, next, previous}) => {
 }
 
 const subtitel = (post) => {
-  return post.datum ? `Clubabend am ${moment(post.datum).format("D.M.YYYY")}` : '';
+  return ''; //post.datum ? `Clubabend am ${moment(post.datum).format("D.M.YYYY")}` : '';
 }
 const ClubabendPostPage = ({ data, pageContext }) => {
   const post = data.strapiClubabends
