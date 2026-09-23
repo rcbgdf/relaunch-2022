@@ -22,7 +22,7 @@ Benjamin Schwenke (Clubpräsident)
 
 Kontakt:
 ```
-E-Mail: toastmasters@rc-bgdf.de
+E-Mail: toastmaster@rc-bgdf.de
 ```
 
 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
